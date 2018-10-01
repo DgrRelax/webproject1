@@ -1,0 +1,14 @@
+#title{
+	text-align: center;
+}
+#outer{
+	height: 400px;
+	width: 400px;
+	margin: auto;
+}
+.form-group{
+	padding-left: 20px;	
+}
+.but{
+	padding-left: 150px;
+}

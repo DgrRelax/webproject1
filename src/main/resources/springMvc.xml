@@ -18,8 +18,10 @@
 	
 	<mvc:annotation-driven/>
 	
+	<!-- Static resources, such as CSS files, cannot be placed under the WEB-INF directory. -->
 	<mvc:default-servlet-handler/>
 	
-	<!-- <mvc:resources location="" mapping=""/> -->
+	<!-- Static resources, such as CSS files, can be placed in the WEB-INF directory. -->
+	<!-- <mvc:resources location="/WEB-INF/css/" mapping="/css/**"/> -->
 	
 </beans>
