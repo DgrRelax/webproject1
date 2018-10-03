@@ -14,9 +14,9 @@ public class Test1 {
 		@SuppressWarnings("resource")
 		ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 		UserController userController = context.getBean(UserController.class);	
-		List<Users> list = userController.queryall();
+	/*	List<Users> list = userController.queryall();
 		for (Users users : list) {
 			System.out.println(users.toString());
-		}
+		}*/
 	}
 }

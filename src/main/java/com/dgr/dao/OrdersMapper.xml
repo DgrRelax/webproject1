@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dgr.dao.OrdersMapper">
+	<!-- 订单查询，关联用户信息 -->
+	<select id="findOrdersUser" resultType="com.dgr.model.User" resultMap="OrdersUserResultMap">
+		SELECT
+			*
+		FROM
+			user t1,
+			orders  t2,
+			OrderDetail t3,
+			Items t4
+		WHERE t1.id = t2.userid	<!-- and t2.id = t3.ordersId and t3.itemsId = t4.id -->
+	</select>
+	
+	<resultMap id="OrdersUserResultMap" type="com.dgr.model.User">
+		<id column="id" property="id"></id>
+		<result column="username" property="username"></result>
+		<result column="sex" property="sex"></result>
+		<result column="address" property="address"></result>
+		<result column="birthday" property="birthday"></result>
+			
+		<collection property="ordersList" ofType="com.dgr.model.Orders">
+			<id column="id" property="id"></id>
+			<result column="userid" property="userid"></result>
+			<result column="number" property="number"></result>
+			<result column="createTime" property="createTime"></result>
+			<result column="note" property="note"></result>
+			<collection property="orderdetails" ofType="com.dgr.model.OrderDetail">
+				<id column="id" property="id"></id>
+				<result column="ordersid" property="ordersId"></result>
+				<result column="itemsid" property="itemsId"></result>
+				<result column="itemsnum" property="itemsNum"></result>
+				<association property="items" javaType="com.dgr.model.Items">
+					<id column="id" property="id"></id>
+					<result column="itemsName" property="itemsName"></result>
+					<result column="price" property="price"></result>
+					<result column="detail" property="detail"></result>
+					<result column="picture" property="picture"></result>
+					<result column="createTime" property="createTime"></result>
+				</association>
+			</collection>
+		</collection>
+		
+	</resultMap>
+	
+
+	
+	
+	
+	
+</mapper>

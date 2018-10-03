@@ -17,6 +17,12 @@
 		<br>
 		<br>
 		<a href="landing">登陆</a>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<a href="register">注册</a>
+		
+		
+		<br>
+		<a href="query">Test</a>
+		<br>
+		<a href="OrdersCustom">Test OrdersCustom</a>
 	</div>
 </body>
 </html>
