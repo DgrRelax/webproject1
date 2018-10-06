@@ -19,17 +19,17 @@
 		</div>
 		
 		<div id="outer">
-			<form class="form-horizontal" role="form">
+			<form class="form-horizontal" role="form" method="post" action="user/login">
 				<div class="form-group">
 					<label for="firstname" class="col-sm-2 control-label">账号</label>
 					<div class="col-sm-10">
-						<input type="text" class="form-control" id="firstname" placeholder="请输入用户名/邮箱/手机号">
+						<input type="text" name="login" class="form-control" id="firstname" placeholder="请输入用户名/邮箱/手机号">
 					</div>
 				</div>
 				<div class="form-group">
 					<label for="lastname" class="col-sm-2 control-label">密码</label>
 					<div class="col-sm-10">
-						<input type="text" class="form-control" id="lastname" placeholder="请输密码">
+						<input type="text" name="password" class="form-control" id="lastname" placeholder="请输密码">
 					</div>
 				</div>
 				<div class="form-group">
@@ -41,14 +41,15 @@
 				</div>
 				<div class="form-group but">
 					<div class="col-sm-offset-2 col-sm-10">
-						<button type="submit" class="btn btn-default">登录</button>
+						<button type="submit" class="btn btn-default" id="submission">登录</button>
 					</div>
 				</div>
 			</form>
 		</div>
 		
-		<script type="application/javascript" src="${pageContext.request.contextPath}/js/jquery-3.3.1/jquery-3.3.1.min.js"></script>
-		<script type="application/javascript" src="${pageContext.request.contextPath}/js/bootstrap/bootstrap.min.js"></script>
+		<script type="application/javascript" src="${pageContext.request.contextPath}/js/jquery-3.3.1.min.js"></script>
+		<script type="application/javascript" src="${pageContext.request.contextPath}/js/bootstrap.min.js"></script>
+		<script type="application/javascript" src="${pageContext.request.contextPath}/js/login.js"></script>
 	</body>
 
 </html>

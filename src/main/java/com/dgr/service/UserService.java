@@ -6,4 +6,6 @@ import com.dgr.model.Users;
 
 public interface UserService {
 	public List<Users> queryall();
+	
+	public Users login(String login,String password);
 }

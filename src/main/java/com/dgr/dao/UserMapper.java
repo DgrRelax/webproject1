@@ -7,4 +7,5 @@ public interface UserMapper {
 	
 	public List<Users> queryall();
 	
+	public Users login(Users users);
 }

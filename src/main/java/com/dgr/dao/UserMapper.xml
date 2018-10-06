@@ -5,7 +5,25 @@
 <mapper namespace="com.dgr.dao.UserMapper">
  
  	<select id="queryall" resultType="Users">
- 		SELECT * FROM users
+ 		SELECT * 
+ 		FROM users
+ 	</select>
+ 	
+ 	<select id="login" resultType="Users" parameterType="com.dgr.model.Users">
+ 		SELECT * 
+ 		FROM users
+ 		WHERE 
+ 		<if test="username != null">
+ 			username = #{username}
+ 		</if>
+ 		<if test="telephone != null">
+ 			telephone = #{telephone}
+ 		</if>
+ 		<if test="email != null">
+ 			email = #{email}
+ 		</if>
+ 		AND password = #{password}
+ 		
  	</select>
  
 </mapper> 

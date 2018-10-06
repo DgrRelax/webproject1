@@ -20,9 +20,9 @@
 		
 		
 		<br>
-		<a href="query">Test</a>
+		<a href="user/query">Test</a>
 		<br>
-		<a href="OrdersCustom">Test OrdersCustom</a>
+		<a href="OrdersCustom">Test Orders</a>
 	</div>
 </body>
 </html>

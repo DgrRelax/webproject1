@@ -8,5 +8,14 @@
 </head>
 <body>
 	<h1>success</h1>
+	<br>
+	
+	${requestScope.user}
+	<br>
+	${requestScope.user.id}
+	<br>
+	${requestScope.user.datatime}
+	
+	
 </body>
 </html>
