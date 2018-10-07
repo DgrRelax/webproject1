@@ -24,4 +24,12 @@
 	<!-- Static resources, such as CSS files, can be placed in the WEB-INF directory. -->
 	<!-- <mvc:resources location="/WEB-INF/css/" mapping="/css/**"/> -->
 	
+	
+	<mvc:annotation-driven>
+		<mvc:message-converters>
+			<bean class="org.springframework.http.converter.StringHttpMessageConverter" />
+			<bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter" />
+		</mvc:message-converters>
+	</mvc:annotation-driven>
+	
 </beans>

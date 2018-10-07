@@ -19,7 +19,7 @@
 		</div>
 		
 		<div id="outer">
-			<form class="form-horizontal" role="form" method="post" action="user/login">
+			<form class="form-horizontal" role="form"> <!-- method="post" action="user/login1" > -->
 				<div class="form-group">
 					<label for="firstname" class="col-sm-2 control-label">账号</label>
 					<div class="col-sm-10">
@@ -41,7 +41,8 @@
 				</div>
 				<div class="form-group but">
 					<div class="col-sm-offset-2 col-sm-10">
-						<button type="submit" class="btn btn-default" id="submission">登录</button>
+						<!-- <button type="submit" class="btn btn-default" id="submission">登录</button> -->
+						<input type="button" class="btn btn-default" id="submission" value="登录">
 					</div>
 				</div>
 			</form>

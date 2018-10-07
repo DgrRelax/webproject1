@@ -19,6 +19,9 @@ public class UserServiceImpl implements UserService{
 		return userMapper.queryall();
 	}
 
+	/**
+	  * 使用表单直接提交的String 类型数据
+	 */
 	public Users login(String login,String password) {
 		Users users = new Users();
 		users.setPassword(password);
@@ -37,4 +40,10 @@ public class UserServiceImpl implements UserService{
 		return null;
 	}
 
+	/**
+	 * 使用ajax 异步提交的
+	 */
+	public Users login2(Users users) {
+		return userMapper.login(users);
+	}
 }

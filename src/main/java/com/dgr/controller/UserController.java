@@ -29,18 +29,37 @@ public class UserController {
 		return "success";
 	}
 	
-	@RequestMapping(value="/login", method=RequestMethod.POST)
-	@ResponseBody
+	/*
+	//表单直接提交
+	@RequestMapping(value="/login1", method=RequestMethod.POST)
 	public ModelAndView login(@RequestParam(name="login")String login,@RequestParam(name="password")String password) {
 		System.out.println(login + " :::::: " + password);
 		
 		ModelAndView modelAndView = new ModelAndView();
 		Users users = userService.login(login, password);
+		if(users == null) {
+			modelAndView.setViewName("error");
+			return modelAndView;
+		}
 		modelAndView.addObject("user", users);
 		modelAndView.setViewName("success");
 		return modelAndView;
-		
-		/*返回空值没处理*/
 	}
+	*/
+	
+	// ajax 提交
+	@RequestMapping(value="/login",method=RequestMethod.POST)
+	@ResponseBody
+	public Users login(Users users) {
+		Users login2 = userService.login2(users);
+		return login2;
+	}
+	
+	
+	@RequestMapping(value="/ajax")
+	public String success() {
+		return "success";
+	}
+	
 	
 }
