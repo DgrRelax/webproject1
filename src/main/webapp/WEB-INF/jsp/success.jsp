@@ -9,7 +9,11 @@
 <body>
 	<h1>success</h1>
 	<br>
-	
+	<!-- 
+		el 表达式的取值顺序
+		pageContext > request > session > application
+		找到一个不为空的值就返回
+	 -->
 	${requestScope.user}
 	<br>
 	${requestScope.user.id}
